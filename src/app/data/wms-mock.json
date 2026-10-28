@@ -1,0 +1,2642 @@
+[
+  {
+    "id": "RUA-1-PRED-1-NIV-1",
+    "position": [
+      0,
+      0.5,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-1-NIV-2",
+    "position": [
+      0,
+      1.7,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-1-NIV-3",
+    "position": [
+      0,
+      2.9,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-1-NIV-4",
+    "position": [
+      0,
+      4.1,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-2-NIV-1",
+    "position": [
+      1.2,
+      0.5,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-2-NIV-2",
+    "position": [
+      1.2,
+      1.7,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-2-NIV-3",
+    "position": [
+      1.2,
+      2.9,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-2-NIV-4",
+    "position": [
+      1.2,
+      4.1,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-3-NIV-1",
+    "position": [
+      2.4,
+      0.5,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-3-NIV-2",
+    "position": [
+      2.4,
+      1.7,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-3-NIV-3",
+    "position": [
+      2.4,
+      2.9,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-3-NIV-4",
+    "position": [
+      2.4,
+      4.1,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-4-NIV-1",
+    "position": [
+      3.5999999999999996,
+      0.5,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-4-NIV-2",
+    "position": [
+      3.5999999999999996,
+      1.7,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-4-NIV-3",
+    "position": [
+      3.5999999999999996,
+      2.9,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "livre",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-4-NIV-4",
+    "position": [
+      3.5999999999999996,
+      4.1,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-5-NIV-1",
+    "position": [
+      4.8,
+      0.5,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-5-NIV-2",
+    "position": [
+      4.8,
+      1.7,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-5-NIV-3",
+    "position": [
+      4.8,
+      2.9,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-5-NIV-4",
+    "position": [
+      4.8,
+      4.1,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-6-NIV-1",
+    "position": [
+      6,
+      0.5,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-6-NIV-2",
+    "position": [
+      6,
+      1.7,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "livre",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-6-NIV-3",
+    "position": [
+      6,
+      2.9,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "livre",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-6-NIV-4",
+    "position": [
+      6,
+      4.1,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "livre",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-7-NIV-1",
+    "position": [
+      7.199999999999999,
+      0.5,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-7-NIV-2",
+    "position": [
+      7.199999999999999,
+      1.7,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-7-NIV-3",
+    "position": [
+      7.199999999999999,
+      2.9,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-7-NIV-4",
+    "position": [
+      7.199999999999999,
+      4.1,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-8-NIV-1",
+    "position": [
+      8.4,
+      0.5,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-8-NIV-2",
+    "position": [
+      8.4,
+      1.7,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-8-NIV-3",
+    "position": [
+      8.4,
+      2.9,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-8-NIV-4",
+    "position": [
+      8.4,
+      4.1,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-9-NIV-1",
+    "position": [
+      9.6,
+      0.5,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "livre",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-9-NIV-2",
+    "position": [
+      9.6,
+      1.7,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-9-NIV-3",
+    "position": [
+      9.6,
+      2.9,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-9-NIV-4",
+    "position": [
+      9.6,
+      4.1,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "livre",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-10-NIV-1",
+    "position": [
+      10.799999999999999,
+      0.5,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "livre",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-10-NIV-2",
+    "position": [
+      10.799999999999999,
+      1.7,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-10-NIV-3",
+    "position": [
+      10.799999999999999,
+      2.9,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-10-NIV-4",
+    "position": [
+      10.799999999999999,
+      4.1,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "livre",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-11-NIV-1",
+    "position": [
+      12,
+      0.5,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-11-NIV-2",
+    "position": [
+      12,
+      1.7,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-11-NIV-3",
+    "position": [
+      12,
+      2.9,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-11-NIV-4",
+    "position": [
+      12,
+      4.1,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "livre",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-12-NIV-1",
+    "position": [
+      13.2,
+      0.5,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-12-NIV-2",
+    "position": [
+      13.2,
+      1.7,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-12-NIV-3",
+    "position": [
+      13.2,
+      2.9,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "livre",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-12-NIV-4",
+    "position": [
+      13.2,
+      4.1,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-13-NIV-1",
+    "position": [
+      14.399999999999999,
+      0.5,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-13-NIV-2",
+    "position": [
+      14.399999999999999,
+      1.7,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-13-NIV-3",
+    "position": [
+      14.399999999999999,
+      2.9,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "livre",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-13-NIV-4",
+    "position": [
+      14.399999999999999,
+      4.1,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "livre",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-14-NIV-1",
+    "position": [
+      15.6,
+      0.5,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-14-NIV-2",
+    "position": [
+      15.6,
+      1.7,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-14-NIV-3",
+    "position": [
+      15.6,
+      2.9,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-14-NIV-4",
+    "position": [
+      15.6,
+      4.1,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-15-NIV-1",
+    "position": [
+      16.8,
+      0.5,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-15-NIV-2",
+    "position": [
+      16.8,
+      1.7,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-15-NIV-3",
+    "position": [
+      16.8,
+      2.9,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-1-PRED-15-NIV-4",
+    "position": [
+      16.8,
+      4.1,
+      0
+    ],
+    "zone": "Aisle A",
+    "status": "ocupado",
+    "color": "#3b82f6"
+  },
+  {
+    "id": "RUA-2-PRED-1-NIV-1",
+    "position": [
+      0,
+      0.5,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "livre",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-1-NIV-2",
+    "position": [
+      0,
+      1.7,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-1-NIV-3",
+    "position": [
+      0,
+      2.9,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-1-NIV-4",
+    "position": [
+      0,
+      4.1,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-2-NIV-1",
+    "position": [
+      1.2,
+      0.5,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-2-NIV-2",
+    "position": [
+      1.2,
+      1.7,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-2-NIV-3",
+    "position": [
+      1.2,
+      2.9,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-2-NIV-4",
+    "position": [
+      1.2,
+      4.1,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-3-NIV-1",
+    "position": [
+      2.4,
+      0.5,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-3-NIV-2",
+    "position": [
+      2.4,
+      1.7,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-3-NIV-3",
+    "position": [
+      2.4,
+      2.9,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "livre",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-3-NIV-4",
+    "position": [
+      2.4,
+      4.1,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-4-NIV-1",
+    "position": [
+      3.5999999999999996,
+      0.5,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "livre",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-4-NIV-2",
+    "position": [
+      3.5999999999999996,
+      1.7,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "livre",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-4-NIV-3",
+    "position": [
+      3.5999999999999996,
+      2.9,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "livre",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-4-NIV-4",
+    "position": [
+      3.5999999999999996,
+      4.1,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-5-NIV-1",
+    "position": [
+      4.8,
+      0.5,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-5-NIV-2",
+    "position": [
+      4.8,
+      1.7,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-5-NIV-3",
+    "position": [
+      4.8,
+      2.9,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-5-NIV-4",
+    "position": [
+      4.8,
+      4.1,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-6-NIV-1",
+    "position": [
+      6,
+      0.5,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-6-NIV-2",
+    "position": [
+      6,
+      1.7,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-6-NIV-3",
+    "position": [
+      6,
+      2.9,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "livre",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-6-NIV-4",
+    "position": [
+      6,
+      4.1,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-7-NIV-1",
+    "position": [
+      7.199999999999999,
+      0.5,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "livre",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-7-NIV-2",
+    "position": [
+      7.199999999999999,
+      1.7,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-7-NIV-3",
+    "position": [
+      7.199999999999999,
+      2.9,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "livre",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-7-NIV-4",
+    "position": [
+      7.199999999999999,
+      4.1,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-8-NIV-1",
+    "position": [
+      8.4,
+      0.5,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-8-NIV-2",
+    "position": [
+      8.4,
+      1.7,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "livre",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-8-NIV-3",
+    "position": [
+      8.4,
+      2.9,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-8-NIV-4",
+    "position": [
+      8.4,
+      4.1,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-9-NIV-1",
+    "position": [
+      9.6,
+      0.5,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-9-NIV-2",
+    "position": [
+      9.6,
+      1.7,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "livre",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-9-NIV-3",
+    "position": [
+      9.6,
+      2.9,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-9-NIV-4",
+    "position": [
+      9.6,
+      4.1,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "livre",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-10-NIV-1",
+    "position": [
+      10.799999999999999,
+      0.5,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-10-NIV-2",
+    "position": [
+      10.799999999999999,
+      1.7,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-10-NIV-3",
+    "position": [
+      10.799999999999999,
+      2.9,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-10-NIV-4",
+    "position": [
+      10.799999999999999,
+      4.1,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-11-NIV-1",
+    "position": [
+      12,
+      0.5,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-11-NIV-2",
+    "position": [
+      12,
+      1.7,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-11-NIV-3",
+    "position": [
+      12,
+      2.9,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-11-NIV-4",
+    "position": [
+      12,
+      4.1,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "livre",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-12-NIV-1",
+    "position": [
+      13.2,
+      0.5,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-12-NIV-2",
+    "position": [
+      13.2,
+      1.7,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "livre",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-12-NIV-3",
+    "position": [
+      13.2,
+      2.9,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-12-NIV-4",
+    "position": [
+      13.2,
+      4.1,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "livre",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-13-NIV-1",
+    "position": [
+      14.399999999999999,
+      0.5,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "livre",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-13-NIV-2",
+    "position": [
+      14.399999999999999,
+      1.7,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "livre",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-13-NIV-3",
+    "position": [
+      14.399999999999999,
+      2.9,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "livre",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-13-NIV-4",
+    "position": [
+      14.399999999999999,
+      4.1,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-14-NIV-1",
+    "position": [
+      15.6,
+      0.5,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-14-NIV-2",
+    "position": [
+      15.6,
+      1.7,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-14-NIV-3",
+    "position": [
+      15.6,
+      2.9,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-14-NIV-4",
+    "position": [
+      15.6,
+      4.1,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-15-NIV-1",
+    "position": [
+      16.8,
+      0.5,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-15-NIV-2",
+    "position": [
+      16.8,
+      1.7,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-15-NIV-3",
+    "position": [
+      16.8,
+      2.9,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-2-PRED-15-NIV-4",
+    "position": [
+      16.8,
+      4.1,
+      4
+    ],
+    "zone": "Aisle B",
+    "status": "ocupado",
+    "color": "#22c55e"
+  },
+  {
+    "id": "RUA-3-PRED-1-NIV-1",
+    "position": [
+      0,
+      0.5,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-1-NIV-2",
+    "position": [
+      0,
+      1.7,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "livre",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-1-NIV-3",
+    "position": [
+      0,
+      2.9,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-1-NIV-4",
+    "position": [
+      0,
+      4.1,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-2-NIV-1",
+    "position": [
+      1.2,
+      0.5,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-2-NIV-2",
+    "position": [
+      1.2,
+      1.7,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-2-NIV-3",
+    "position": [
+      1.2,
+      2.9,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-2-NIV-4",
+    "position": [
+      1.2,
+      4.1,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-3-NIV-1",
+    "position": [
+      2.4,
+      0.5,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-3-NIV-2",
+    "position": [
+      2.4,
+      1.7,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-3-NIV-3",
+    "position": [
+      2.4,
+      2.9,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-3-NIV-4",
+    "position": [
+      2.4,
+      4.1,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-4-NIV-1",
+    "position": [
+      3.5999999999999996,
+      0.5,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-4-NIV-2",
+    "position": [
+      3.5999999999999996,
+      1.7,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-4-NIV-3",
+    "position": [
+      3.5999999999999996,
+      2.9,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-4-NIV-4",
+    "position": [
+      3.5999999999999996,
+      4.1,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-5-NIV-1",
+    "position": [
+      4.8,
+      0.5,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-5-NIV-2",
+    "position": [
+      4.8,
+      1.7,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "livre",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-5-NIV-3",
+    "position": [
+      4.8,
+      2.9,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-5-NIV-4",
+    "position": [
+      4.8,
+      4.1,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-6-NIV-1",
+    "position": [
+      6,
+      0.5,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-6-NIV-2",
+    "position": [
+      6,
+      1.7,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-6-NIV-3",
+    "position": [
+      6,
+      2.9,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "livre",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-6-NIV-4",
+    "position": [
+      6,
+      4.1,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "livre",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-7-NIV-1",
+    "position": [
+      7.199999999999999,
+      0.5,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-7-NIV-2",
+    "position": [
+      7.199999999999999,
+      1.7,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-7-NIV-3",
+    "position": [
+      7.199999999999999,
+      2.9,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-7-NIV-4",
+    "position": [
+      7.199999999999999,
+      4.1,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-8-NIV-1",
+    "position": [
+      8.4,
+      0.5,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "livre",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-8-NIV-2",
+    "position": [
+      8.4,
+      1.7,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-8-NIV-3",
+    "position": [
+      8.4,
+      2.9,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-8-NIV-4",
+    "position": [
+      8.4,
+      4.1,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-9-NIV-1",
+    "position": [
+      9.6,
+      0.5,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-9-NIV-2",
+    "position": [
+      9.6,
+      1.7,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "livre",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-9-NIV-3",
+    "position": [
+      9.6,
+      2.9,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "livre",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-9-NIV-4",
+    "position": [
+      9.6,
+      4.1,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-10-NIV-1",
+    "position": [
+      10.799999999999999,
+      0.5,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-10-NIV-2",
+    "position": [
+      10.799999999999999,
+      1.7,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-10-NIV-3",
+    "position": [
+      10.799999999999999,
+      2.9,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "livre",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-10-NIV-4",
+    "position": [
+      10.799999999999999,
+      4.1,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "livre",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-11-NIV-1",
+    "position": [
+      12,
+      0.5,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "livre",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-11-NIV-2",
+    "position": [
+      12,
+      1.7,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-11-NIV-3",
+    "position": [
+      12,
+      2.9,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "livre",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-11-NIV-4",
+    "position": [
+      12,
+      4.1,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "livre",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-12-NIV-1",
+    "position": [
+      13.2,
+      0.5,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "livre",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-12-NIV-2",
+    "position": [
+      13.2,
+      1.7,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-12-NIV-3",
+    "position": [
+      13.2,
+      2.9,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-12-NIV-4",
+    "position": [
+      13.2,
+      4.1,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-13-NIV-1",
+    "position": [
+      14.399999999999999,
+      0.5,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "livre",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-13-NIV-2",
+    "position": [
+      14.399999999999999,
+      1.7,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-13-NIV-3",
+    "position": [
+      14.399999999999999,
+      2.9,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-13-NIV-4",
+    "position": [
+      14.399999999999999,
+      4.1,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-14-NIV-1",
+    "position": [
+      15.6,
+      0.5,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "livre",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-14-NIV-2",
+    "position": [
+      15.6,
+      1.7,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-14-NIV-3",
+    "position": [
+      15.6,
+      2.9,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-14-NIV-4",
+    "position": [
+      15.6,
+      4.1,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "livre",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-15-NIV-1",
+    "position": [
+      16.8,
+      0.5,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "livre",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-15-NIV-2",
+    "position": [
+      16.8,
+      1.7,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-15-NIV-3",
+    "position": [
+      16.8,
+      2.9,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "livre",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-3-PRED-15-NIV-4",
+    "position": [
+      16.8,
+      4.1,
+      8
+    ],
+    "zone": "Aisle C",
+    "status": "ocupado",
+    "color": "#f97316"
+  },
+  {
+    "id": "RUA-4-PRED-1-NIV-1",
+    "position": [
+      0,
+      0.5,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-1-NIV-2",
+    "position": [
+      0,
+      1.7,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-1-NIV-3",
+    "position": [
+      0,
+      2.9,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-1-NIV-4",
+    "position": [
+      0,
+      4.1,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-2-NIV-1",
+    "position": [
+      1.2,
+      0.5,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-2-NIV-2",
+    "position": [
+      1.2,
+      1.7,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-2-NIV-3",
+    "position": [
+      1.2,
+      2.9,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-2-NIV-4",
+    "position": [
+      1.2,
+      4.1,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-3-NIV-1",
+    "position": [
+      2.4,
+      0.5,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-3-NIV-2",
+    "position": [
+      2.4,
+      1.7,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-3-NIV-3",
+    "position": [
+      2.4,
+      2.9,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-3-NIV-4",
+    "position": [
+      2.4,
+      4.1,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-4-NIV-1",
+    "position": [
+      3.5999999999999996,
+      0.5,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-4-NIV-2",
+    "position": [
+      3.5999999999999996,
+      1.7,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-4-NIV-3",
+    "position": [
+      3.5999999999999996,
+      2.9,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-4-NIV-4",
+    "position": [
+      3.5999999999999996,
+      4.1,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-5-NIV-1",
+    "position": [
+      4.8,
+      0.5,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-5-NIV-2",
+    "position": [
+      4.8,
+      1.7,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-5-NIV-3",
+    "position": [
+      4.8,
+      2.9,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-5-NIV-4",
+    "position": [
+      4.8,
+      4.1,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-6-NIV-1",
+    "position": [
+      6,
+      0.5,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-6-NIV-2",
+    "position": [
+      6,
+      1.7,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-6-NIV-3",
+    "position": [
+      6,
+      2.9,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-6-NIV-4",
+    "position": [
+      6,
+      4.1,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-7-NIV-1",
+    "position": [
+      7.199999999999999,
+      0.5,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-7-NIV-2",
+    "position": [
+      7.199999999999999,
+      1.7,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-7-NIV-3",
+    "position": [
+      7.199999999999999,
+      2.9,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-7-NIV-4",
+    "position": [
+      7.199999999999999,
+      4.1,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-8-NIV-1",
+    "position": [
+      8.4,
+      0.5,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-8-NIV-2",
+    "position": [
+      8.4,
+      1.7,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-8-NIV-3",
+    "position": [
+      8.4,
+      2.9,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-8-NIV-4",
+    "position": [
+      8.4,
+      4.1,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-9-NIV-1",
+    "position": [
+      9.6,
+      0.5,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-9-NIV-2",
+    "position": [
+      9.6,
+      1.7,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-9-NIV-3",
+    "position": [
+      9.6,
+      2.9,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-9-NIV-4",
+    "position": [
+      9.6,
+      4.1,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-10-NIV-1",
+    "position": [
+      10.799999999999999,
+      0.5,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-10-NIV-2",
+    "position": [
+      10.799999999999999,
+      1.7,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-10-NIV-3",
+    "position": [
+      10.799999999999999,
+      2.9,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-10-NIV-4",
+    "position": [
+      10.799999999999999,
+      4.1,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-11-NIV-1",
+    "position": [
+      12,
+      0.5,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-11-NIV-2",
+    "position": [
+      12,
+      1.7,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-11-NIV-3",
+    "position": [
+      12,
+      2.9,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-11-NIV-4",
+    "position": [
+      12,
+      4.1,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-12-NIV-1",
+    "position": [
+      13.2,
+      0.5,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-12-NIV-2",
+    "position": [
+      13.2,
+      1.7,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-12-NIV-3",
+    "position": [
+      13.2,
+      2.9,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-12-NIV-4",
+    "position": [
+      13.2,
+      4.1,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-13-NIV-1",
+    "position": [
+      14.399999999999999,
+      0.5,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-13-NIV-2",
+    "position": [
+      14.399999999999999,
+      1.7,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-13-NIV-3",
+    "position": [
+      14.399999999999999,
+      2.9,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-13-NIV-4",
+    "position": [
+      14.399999999999999,
+      4.1,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-14-NIV-1",
+    "position": [
+      15.6,
+      0.5,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-14-NIV-2",
+    "position": [
+      15.6,
+      1.7,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-14-NIV-3",
+    "position": [
+      15.6,
+      2.9,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-14-NIV-4",
+    "position": [
+      15.6,
+      4.1,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-15-NIV-1",
+    "position": [
+      16.8,
+      0.5,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "livre",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-15-NIV-2",
+    "position": [
+      16.8,
+      1.7,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-15-NIV-3",
+    "position": [
+      16.8,
+      2.9,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  },
+  {
+    "id": "RUA-4-PRED-15-NIV-4",
+    "position": [
+      16.8,
+      4.1,
+      12
+    ],
+    "zone": "Aisle D",
+    "status": "ocupado",
+    "color": "#a855f7"
+  }
+]
