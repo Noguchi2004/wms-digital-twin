@@ -103,7 +103,8 @@ function CameraRig({
     <CameraControls
       ref={controlsRef}
       makeDefault
-      dollySpeed={1.5}
+      dollySpeed={1.4}
+      truckSpeed={1.4}
       minDistance={1.5}
       maxDistance={260}
       mouseButtons={{ left: 1, right: 2, wheel: 4, middle: 0 }}
@@ -127,9 +128,11 @@ export default function Scene({
 
   return (
     <Canvas
+      dpr={[1, 1.75]}
+      gl={{ powerPreference: 'high-performance', antialias: true }}
       camera={{ position: [-4, 65, 72], fov: 42 }}
       shadows
-      style={{ background: bgColor }}
+      style={{ width: '100%', height: '100%', touchAction: 'none', background: bgColor }}
     >
       <fog attach="fog" args={[bgColor, 130, 320]} />
 
@@ -138,8 +141,8 @@ export default function Scene({
         position={[60, 100, 50]}
         intensity={1.3}
         castShadow
-        shadow-mapSize-width={2048}
-        shadow-mapSize-height={2048}
+        shadow-mapSize-width={1024}
+        shadow-mapSize-height={1024}
         shadow-camera-far={300}
         shadow-camera-left={-140}
         shadow-camera-right={140}
