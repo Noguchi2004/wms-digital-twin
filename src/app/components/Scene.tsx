@@ -3,50 +3,34 @@ import { Canvas } from '@react-three/fiber';
 import { CameraControls, Grid } from '@react-three/drei';
 import { useRef, useEffect, Suspense } from 'react';
 import ComplexModel from './ComplexModel';
-import { COMPLEX_BLOCKS, ComplexBlock } from '../data/complex-data';
+import { ComplexBlock } from '../data/complex-data';
 
 interface SceneProps {
   selectedBlock: ComplexBlock | null;
   onSelectBlock: (block: ComplexBlock | null) => void;
-  selectedPallet: any;
-  onSelectPallet: (pallet: any) => void;
   resetTrigger: number;
-  viewMode: 'Campus' | '2D' | 'Rodovia' | 'Patio' | 'Interno';
+  viewMode: 'Campus' | '2D' | 'Rodovia' | 'Patio';
   isOpenRoof: boolean;
   filterStatus: string | null;
-  isHeatmap: boolean;
   isLightBlueprint?: boolean;
 }
 
 function CameraRig({
   selectedBlock,
-  selectedPallet,
   resetTrigger,
   viewMode,
 }: {
   selectedBlock: ComplexBlock | null;
-  selectedPallet: any;
   resetTrigger: number;
   viewMode: string;
 }) {
   const controlsRef = useRef<any>(null);
 
-  // FOCO NO BLOCO OU PALETE SELECIONADO
+  // FOCO NO BLOCO SELECIONADO
   useEffect(() => {
     if (!controlsRef.current) return;
 
-    if (selectedPallet) {
-      const [px, py, pz] = selectedPallet.worldPos || selectedPallet.position;
-      controlsRef.current.setLookAt(
-        px,
-        py + 0.9,
-        pz + 2.2,
-        px,
-        py,
-        pz,
-        true
-      );
-    } else if (selectedBlock && viewMode !== 'Interno') {
+    if (selectedBlock) {
       const [bx, by, bz] = selectedBlock.position;
       const [bw, , bd] = selectedBlock.size;
       const maxDim = Math.max(bw, bd);
@@ -61,7 +45,7 @@ function CameraRig({
         true
       );
     }
-  }, [selectedBlock, selectedPallet, viewMode]);
+  }, [selectedBlock]);
 
   // CONTROLE DOS MODOS DE VISÃO DO COMPLEXO
   useEffect(() => {
@@ -76,28 +60,11 @@ function CameraRig({
     } else if (viewMode === 'Patio') {
       // PÁTIO CENTRAL E ESTACIONAMENTO DE CARRETAS
       controlsRef.current.setLookAt(38, 14, 20, -6, 2, -4, true);
-    } else if (viewMode === 'Interno') {
-      // MERGULHO IMERSIVO DENTRO DO GALPÃO SELECIONADO (OU BLOCO E)
-      const target =
-        selectedBlock ||
-        COMPLEX_BLOCKS.find((b) => b.id === 'bloco-e') ||
-        COMPLEX_BLOCKS[0];
-      const [bx, , bz] = target.position;
-      const [bw] = target.size;
-      controlsRef.current.setLookAt(
-        bx - bw * 0.25,
-        1.8,
-        bz,
-        bx + bw * 0.25,
-        1.5,
-        bz,
-        true
-      );
     } else {
       // VISÃO PANORÂMICA 3D DO COMPLEXO LOGÍSTICO
       controlsRef.current.setLookAt(-4, 65, 72, -4, 0, 2, true);
     }
-  }, [resetTrigger, viewMode, selectedBlock]);
+  }, [resetTrigger, viewMode]);
 
   return (
     <CameraControls
@@ -115,13 +82,10 @@ function CameraRig({
 export default function Scene({
   selectedBlock,
   onSelectBlock,
-  selectedPallet,
-  onSelectPallet,
   resetTrigger,
   viewMode,
   isOpenRoof,
   filterStatus,
-  isHeatmap,
   isLightBlueprint = false,
 }: SceneProps) {
   const bgColor = isLightBlueprint ? '#e2e8f0' : '#060a14';
@@ -154,21 +118,15 @@ export default function Scene({
       <Suspense fallback={null}>
         <ComplexModel
           selectedBlockId={selectedBlock?.id || null}
-          onSelectBlock={(b) => {
-            onSelectPallet(null);
-            onSelectBlock(b);
-          }}
-          onSelectPallet={onSelectPallet}
+          onSelectBlock={onSelectBlock}
           isOpenRoof={isOpenRoof}
           filterStatus={filterStatus}
-          isHeatmap={isHeatmap}
           isLightBlueprint={isLightBlueprint}
         />
       </Suspense>
 
       <CameraRig
         selectedBlock={selectedBlock}
-        selectedPallet={selectedPallet}
         resetTrigger={resetTrigger}
         viewMode={viewMode}
       />

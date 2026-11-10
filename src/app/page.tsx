@@ -11,13 +11,11 @@ import {
 
 export default function Home() {
   const [selectedBlock, setSelectedBlock] = useState<ComplexBlock | null>(null);
-  const [selectedPallet, setSelectedPallet] = useState<any>(null);
   const [resetTrigger, setResetTrigger] = useState(0);
 
-  // Modos de Visão da Câmera
-  const [viewMode, setViewMode] = useState<'Campus' | '2D' | 'Rodovia' | 'Patio' | 'Interno'>('Campus');
+  // Modos de Visão da Câmera (Focados no Campus e Instalações)
+  const [viewMode, setViewMode] = useState<'Campus' | '2D' | 'Rodovia' | 'Patio'>('Campus');
   const [isOpenRoof, setIsOpenRoof] = useState(false);
-  const [isHeatmap, setIsHeatmap] = useState(false);
   const [isLightBlueprint, setIsLightBlueprint] = useState(false);
   const [filterStatus, setFilterStatus] = useState<BlockStatus | null>(null);
 
@@ -36,7 +34,6 @@ export default function Home() {
 
   const handleSelectBlock = (block: ComplexBlock | null) => {
     setSelectedBlock(block);
-    setSelectedPallet(null);
   };
 
   return (
@@ -50,18 +47,15 @@ export default function Home() {
         fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
       }}
     >
-      {/* 1. CAMADA 3D (CANVAS THREE.JS COM PERFORMANCE OTIMIZADA PARA MOBILE) */}
+      {/* 1. CAMADA 3D (CANVAS THREE.JS COM OS GALPÕES LIMPOS E VAZIOS) */}
       <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
         <Scene
           selectedBlock={selectedBlock}
           onSelectBlock={handleSelectBlock}
-          selectedPallet={selectedPallet}
-          onSelectPallet={setSelectedPallet}
           resetTrigger={resetTrigger}
           viewMode={viewMode}
           isOpenRoof={isOpenRoof}
           filterStatus={filterStatus}
-          isHeatmap={isHeatmap}
           isLightBlueprint={isLightBlueprint}
         />
       </div>
@@ -128,12 +122,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/* BOTÕES DE UTILIDADES (COMPACTOS NO MOBILE) */}
+          {/* BOTÕES DE UTILIDADES */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexShrink: 0 }}>
-            {/* Raio-X */}
+            {/* Raio-X / Teto Aberto */}
             <button
               onClick={() => setIsOpenRoof(!isOpenRoof)}
-              title="Abrir/Fechar Telhados (Raio-X)"
+              title="Abrir/Fechar Telhados (Ver Interior Limpo)"
               style={{
                 padding: isMobile ? '6px 10px' : '6px 12px',
                 background: isOpenRoof ? '#8b5cf6' : 'rgba(30, 41, 59, 0.8)',
@@ -146,24 +140,6 @@ export default function Home() {
               }}
             >
               🏢 {isMobile ? (isOpenRoof ? 'Teto ON' : 'Teto') : `Raio-X ${isOpenRoof ? 'ON' : 'OFF'}`}
-            </button>
-
-            {/* Heatmap */}
-            <button
-              onClick={() => setIsHeatmap(!isHeatmap)}
-              title="Mapa de Calor (Ocupação)"
-              style={{
-                padding: isMobile ? '6px 10px' : '6px 12px',
-                background: isHeatmap ? '#f97316' : 'rgba(30, 41, 59, 0.8)',
-                color: isHeatmap ? '#ffffff' : '#cbd5e1',
-                borderRadius: '8px',
-                border: '1px solid rgba(249, 115, 22, 0.4)',
-                cursor: 'pointer',
-                fontSize: isMobile ? '11px' : '12px',
-                fontWeight: 700,
-              }}
-            >
-              🔥 {isMobile ? (isHeatmap ? 'Heat ON' : 'Heat') : `Heatmap ${isHeatmap ? 'ON' : 'OFF'}`}
             </button>
 
             {/* Dark / Light Toggle */}
@@ -205,7 +181,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* LINHA 2: CARROSSEL DE CÂMARAS (HORIZONTAL COM TOUCH FLUIDO) */}
+        {/* LINHA 2: CARROSSEL DE CÂMARAS (HORIZONTAL TOUCH) */}
         <div
           className="no-scrollbar"
           style={{
@@ -227,7 +203,6 @@ export default function Home() {
             onClick={() => {
               setViewMode('Campus');
               setSelectedBlock(null);
-              setSelectedPallet(null);
               setResetTrigger((prev) => prev + 1);
             }}
             style={{
@@ -251,7 +226,6 @@ export default function Home() {
             onClick={() => {
               setViewMode('2D');
               setSelectedBlock(null);
-              setSelectedPallet(null);
             }}
             style={{
               padding: isMobile ? '6px 12px' : '8px 14px',
@@ -274,7 +248,6 @@ export default function Home() {
             onClick={() => {
               setViewMode('Rodovia');
               setSelectedBlock(null);
-              setSelectedPallet(null);
             }}
             style={{
               padding: isMobile ? '6px 12px' : '8px 14px',
@@ -297,7 +270,6 @@ export default function Home() {
             onClick={() => {
               setViewMode('Patio');
               setSelectedBlock(null);
-              setSelectedPallet(null);
             }}
             style={{
               padding: isMobile ? '6px 12px' : '8px 14px',
@@ -312,38 +284,12 @@ export default function Home() {
               flexShrink: 0,
             }}
           >
-            🚛 Pátio
-          </button>
-
-          {/* WMS Interno */}
-          <button
-            onClick={() => {
-              setViewMode('Interno');
-              setIsOpenRoof(true);
-              const blocoE = COMPLEX_BLOCKS.find((b) => b.id === 'bloco-e');
-              if (blocoE) setSelectedBlock(blocoE);
-              setSelectedPallet(null);
-              setResetTrigger((prev) => prev + 1);
-            }}
-            style={{
-              padding: isMobile ? '6px 12px' : '8px 14px',
-              background: viewMode === 'Interno' ? '#3b82f6' : 'transparent',
-              color: viewMode === 'Interno' ? '#ffffff' : '#cbd5e1',
-              borderRadius: '8px',
-              border: 'none',
-              cursor: 'pointer',
-              fontSize: '12px',
-              fontWeight: 700,
-              whiteSpace: 'nowrap',
-              flexShrink: 0,
-            }}
-          >
-            📦 WMS Interno
+            🚛 Pátio & Docas
           </button>
         </div>
       </div>
 
-      {/* 3. FILTROS DA PLANTA OFICIAL (DESKTOP: CANTO INFERIOR ESQUERDO / MOBILE: MODAL COLAPSÁVEL) */}
+      {/* 3. FILTROS DA PLANTA OFICIAL (DESKTOP: CANTO INFERIOR ESQUERDO / MOBILE: POPUP) */}
       {(!isMobile || isMobileFilterOpen) && (
         <div
           style={{
@@ -481,8 +427,8 @@ export default function Home() {
         </div>
       )}
 
-      {/* 4. PAINEL DE DETALHES DO GALPÃO (DESKTOP: LATERAL / MOBILE: BOTTOM SHEET MODAL COM SCROLL) */}
-      {selectedBlock && !selectedPallet && (
+      {/* 4. PAINEL DE DETALHES DO GALPÃO (DESKTOP: LATERAL / MOBILE: BOTTOM SHEET) */}
+      {selectedBlock && (
         <aside
           className={isMobile ? 'animate-slide-up' : ''}
           style={{
@@ -505,7 +451,6 @@ export default function Home() {
             backdropFilter: 'blur(16px)',
           }}
         >
-          {/* Drag Handle para Mobile */}
           {isMobile && (
             <div
               style={{
@@ -518,7 +463,6 @@ export default function Home() {
             />
           )}
 
-          {/* Cabeçalho do Card */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '14px' }}>
             <div>
               <span
@@ -562,7 +506,6 @@ export default function Home() {
             {selectedBlock.description}
           </p>
 
-          {/* Métricas do Galpão */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '13px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '6px', borderBottom: '1px solid #1e293b' }}>
               <span style={{ color: '#94a3b8' }}>Área Construída:</span>
@@ -593,7 +536,6 @@ export default function Home() {
               </div>
             )}
 
-            {/* Lista dos Módulos */}
             <div style={{ marginTop: '4px' }}>
               <span style={{ fontSize: '10px', color: '#94a3b8', fontWeight: 700, textTransform: 'uppercase' }}>
                 Módulos Integrados ({selectedBlock.modules.length})
@@ -617,139 +559,50 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Botão de Estoque Interno 3D */}
-            <button
-              onClick={() => {
-                setIsOpenRoof(true);
-                setViewMode('Interno');
-                setResetTrigger((prev) => prev + 1);
-              }}
-              style={{
-                marginTop: '12px',
-                width: '100%',
-                padding: '12px',
-                borderRadius: '10px',
-                background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
-                color: 'white',
-                border: 'none',
-                fontWeight: 800,
-                fontSize: '13px',
-                cursor: 'pointer',
-                boxShadow: '0 4px 12px rgba(59, 130, 246, 0.4)',
-              }}
-            >
-              📦 Abrir Gêmeo Digital Interno (WMS 3D)
-            </button>
-          </div>
-        </aside>
-      )}
-
-      {/* 5. PAINEL DE INSPEÇÃO DO PALETE INDIVIDUAL (RESPONSIVO BOTTOM SHEET) */}
-      {selectedPallet && (
-        <aside
-          className={isMobile ? 'animate-slide-up' : ''}
-          style={{
-            position: 'absolute',
-            top: isMobile ? 'auto' : '16px',
-            bottom: isMobile ? '0' : 'auto',
-            left: isMobile ? '0' : 'auto',
-            right: isMobile ? '0' : '16px',
-            width: isMobile ? '100%' : '340px',
-            maxHeight: isMobile ? '50dvh' : 'auto',
-            overflowY: 'auto',
-            background: 'rgba(15, 23, 42, 0.96)',
-            padding: isMobile ? '14px 20px 24px' : '24px',
-            borderRadius: isMobile ? '24px 24px 0 0' : '16px',
-            border: '1px solid #38bdf8',
-            borderBottom: isMobile ? 'none' : undefined,
-            color: 'white',
-            zIndex: 60,
-            boxShadow: '0 -8px 30px rgba(0, 0, 0, 0.7)',
-            backdropFilter: 'blur(16px)',
-          }}
-        >
-          {isMobile && (
-            <div
-              style={{
-                width: '40px',
-                height: '4px',
-                borderRadius: '2px',
-                background: '#64748b',
-                margin: '0 auto 12px auto',
-              }}
-            />
-          )}
-
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
-            <h2 style={{ margin: 0, fontSize: '18px', fontWeight: 800 }}>Posição de Palete</h2>
-            <button
-              onClick={() => setSelectedPallet(null)}
-              style={{
-                background: 'rgba(30, 41, 59, 0.7)',
-                border: 'none',
-                color: '#cbd5e1',
-                cursor: 'pointer',
-                fontSize: '16px',
-                width: '30px',
-                height: '30px',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              ✕
-            </button>
-          </div>
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '13px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <span style={{ color: '#94a3b8' }}>Endereço WMS:</span>
-              <span style={{ fontWeight: 900, color: '#38bdf8' }}>{selectedPallet.id}</span>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <span style={{ color: '#94a3b8' }}>Rua / Lado:</span>
-              <span style={{ fontWeight: 600 }}>{selectedPallet.aisle}</span>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <span style={{ color: '#94a3b8' }}>Coluna / Nível:</span>
-              <span style={{ fontWeight: 600 }}>Prédio {selectedPallet.bay} • Nível {selectedPallet.level}</span>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <span style={{ color: '#94a3b8' }}>Status:</span>
-              <span
+            {/* Ações do Galpão */}
+            <div style={{ display: 'flex', gap: '8px', marginTop: '12px' }}>
+              <button
+                onClick={() => {
+                  setResetTrigger((prev) => prev + 1);
+                }}
                 style={{
-                  fontWeight: 900,
-                  color: selectedPallet.status === 'livre' ? '#22c55e' : '#f97316',
+                  flex: 1,
+                  padding: '11px',
+                  borderRadius: '10px',
+                  background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
+                  color: 'white',
+                  border: 'none',
+                  fontWeight: 800,
+                  fontSize: '12px',
+                  cursor: 'pointer',
+                  boxShadow: '0 4px 12px rgba(59, 130, 246, 0.4)',
                 }}
               >
-                {selectedPallet.status.toUpperCase()}
-              </span>
+                🔍 Focar Galpão 3D
+              </button>
+
+              <button
+                onClick={() => setIsOpenRoof(!isOpenRoof)}
+                style={{
+                  padding: '11px 14px',
+                  borderRadius: '10px',
+                  background: isOpenRoof ? '#8b5cf6' : '#1e293b',
+                  color: 'white',
+                  border: '1px solid rgba(139, 92, 246, 0.4)',
+                  fontWeight: 700,
+                  fontSize: '12px',
+                  cursor: 'pointer',
+                }}
+              >
+                {isOpenRoof ? 'Fechar Teto' : 'Raio-X'}
+              </button>
             </div>
-            {selectedPallet.cliente && (
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <span style={{ color: '#94a3b8' }}>Cliente:</span>
-                <span style={{ fontWeight: 700, color: '#ffffff' }}>{selectedPallet.cliente}</span>
-              </div>
-            )}
-            {selectedPallet.lote && (
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <span style={{ color: '#94a3b8' }}>Lote / NF:</span>
-                <span style={{ fontWeight: 600, color: '#ffffff' }}>{selectedPallet.lote}</span>
-              </div>
-            )}
-            {selectedPallet.dataEntrada && (
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <span style={{ color: '#94a3b8' }}>Data Entrada:</span>
-                <span style={{ fontWeight: 600, color: '#cbd5e1' }}>{selectedPallet.dataEntrada}</span>
-              </div>
-            )}
           </div>
         </aside>
       )}
 
-      {/* 6. RESUMO EXECUTIVO DO COMPLEXO (DESKTOP: CANTO INFERIOR DIREITO) */}
-      {!isMobile && !selectedBlock && !selectedPallet && (
+      {/* 5. RESUMO EXECUTIVO DO COMPLEXO (DESKTOP: CANTO INFERIOR DIREITO) */}
+      {!isMobile && !selectedBlock && (
         <div
           style={{
             position: 'absolute',

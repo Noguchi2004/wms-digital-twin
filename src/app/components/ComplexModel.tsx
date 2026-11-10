@@ -10,15 +10,12 @@ import {
   WORLD_DEPTH,
   pxToWorld,
 } from '../data/complex-data';
-import WarehouseRacks from './WarehouseRacks';
 
 interface ComplexModelProps {
   selectedBlockId: string | null;
   onSelectBlock: (block: ComplexBlock) => void;
-  onSelectPallet?: (pallet: any) => void;
   isOpenRoof: boolean;
   filterStatus: string | null;
-  isHeatmap?: boolean;
   isLightBlueprint?: boolean;
 }
 
@@ -26,24 +23,21 @@ function ExtrudedBlockMesh({
   block,
   isSelected,
   isHovered,
-  isRackVisible,
+  isOpenRoof,
   blueprintTexture,
   onSelectBlock,
   onHover,
-  onSelectPallet,
-  isHeatmap,
 }: {
   block: ComplexBlock;
   isSelected: boolean;
   isHovered: boolean;
-  isRackVisible: boolean;
+  isOpenRoof: boolean;
   blueprintTexture: THREE.Texture;
   onSelectBlock: (block: ComplexBlock) => void;
   onHover: (id: string | null) => void;
-  onSelectPallet?: (pallet: any) => void;
-  isHeatmap: boolean;
 }) {
-  const extrudeHeight = isRackVisible ? 0.45 : block.height3D;
+  const extrudeHeight = block.height3D;
+  const isRoofTransparent = isOpenRoof || isSelected;
 
   // CRIA A GEOMETRIA POLIGONAL 3D EXATA A PARTIR DOS VÉRTICES DA PLANTA OFICIAL
   const { geometry, edgesGeometry } = useMemo(() => {
@@ -51,7 +45,7 @@ function ExtrudedBlockMesh({
 
     block.pixelPolygon.forEach(([px, py], idx) => {
       const [wx, wz] = pxToWorld(px, py);
-      // Como o mesh será rotacionado em [-Math.PI / 2, 0, 0], y_shape corresponde a -Z_world
+      // Como o mesh é rotacionado em [-Math.PI / 2, 0, 0], y_shape corresponde a -Z_world
       const sx = wx;
       const sy = -wz;
       if (idx === 0) {
@@ -83,11 +77,21 @@ function ExtrudedBlockMesh({
   }, [block.pixelPolygon, extrudeHeight]);
 
   const [cx, , cz] = block.position;
-  const [bw, bh, bd] = block.size;
 
   return (
     <group>
-      {/* VOLUME POLIGONAL 3D EXTRUDADO EXATAMENTE SOBRE A PLANTA */}
+      {/* PISO INDUSTRIAL DE CONCRETO INTERNO DO GALPÃO (VAZIO E LIMPO) */}
+      {isRoofTransparent && (
+        <mesh
+          rotation={[-Math.PI / 2, 0, 0]}
+          position={[0, 0.04, 0]}
+        >
+          <planeGeometry args={[block.size[0] * 0.95, block.size[2] * 0.95]} />
+          <meshStandardMaterial color="#1e293b" roughness={0.8} metalness={0.1} />
+        </mesh>
+      )}
+
+      {/* VOLUME POLIGONAL 3D EXTRUDADO EXATAMENTE SOBRE A PLANTA (SEM ESTOQUE) */}
       <mesh
         geometry={geometry}
         rotation={[-Math.PI / 2, 0, 0]}
@@ -108,20 +112,14 @@ function ExtrudedBlockMesh({
           document.body.style.cursor = 'auto';
         }}
       >
-        {/* Material 0: Cobertura com o desenho CAD exato da planta (módulos, cotas e textos) */}
+        {/* Material 0: Cobertura com o desenho CAD oficial (Translúcida se Raio-X ativado) */}
         <meshBasicMaterial
           attach="material-0"
           map={blueprintTexture}
-          color={
-            isSelected
-              ? '#ffffff'
-              : isHovered
-              ? '#fef08a'
-              : '#ffffff'
-          }
+          color={isSelected ? '#ffffff' : isHovered ? '#fef08a' : '#ffffff'}
           toneMapped={false}
-          transparent={isRackVisible}
-          opacity={isRackVisible ? 0.15 : 1}
+          transparent={isRoofTransparent}
+          opacity={isRoofTransparent ? 0.35 : 1}
         />
 
         {/* Material 1: Paredes laterais 3D do galpão */}
@@ -136,6 +134,8 @@ function ExtrudedBlockMesh({
           }
           roughness={0.45}
           metalness={0.25}
+          transparent={isRoofTransparent}
+          opacity={isRoofTransparent ? 0.75 : 1}
         />
       </mesh>
 
@@ -149,19 +149,6 @@ function ExtrudedBlockMesh({
           color={isSelected ? '#38bdf8' : isHovered ? '#fde047' : block.borderColor}
         />
       </lineSegments>
-
-      {/* ESTOQUE INTERNO WMS (INSTANCED MESH) QUANDO O BLOCO ESTÁ EM MODO RAIO-X */}
-      {isRackVisible && (
-        <group position={[cx, 0.05, cz]}>
-          <WarehouseRacks
-            blockWorldPos={[cx, 0.05, cz]}
-            blockRotationY={block.rotationY || 0}
-            buildingSize={[bw * 0.82, bh, bd * 0.78]}
-            onSelectBlock={onSelectPallet}
-            isHeatmap={isHeatmap}
-          />
-        </group>
-      )}
 
       {/* BADGE FLUTUANTE 3D INTERATIVA */}
       <Html
@@ -217,16 +204,13 @@ function ExtrudedBlockMesh({
 export default function ComplexModel({
   selectedBlockId,
   onSelectBlock,
-  onSelectPallet,
   isOpenRoof,
   filterStatus,
-  isHeatmap = false,
   isLightBlueprint = false,
 }: ComplexModelProps) {
   const [hoveredBlockId, setHoveredBlockId] = useState<string | null>(null);
   const { gl } = useThree();
 
-  // Carrega as texturas de alta resolução (5120x1980) geradas diretamente do PDF oficial
   const [darkTex, lightTex] = useTexture([
     '/planta-clrc-dark.png',
     '/planta-clrc.png',
@@ -263,7 +247,7 @@ export default function ComplexModel({
         />
       </mesh>
 
-      {/* Moldura Arquitetônica Externa sob a Prancha */}
+      {/* Moldura Arquitetônica Externa */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.08, 0]}>
         <planeGeometry args={[WORLD_WIDTH + 6, WORLD_DEPTH + 6]} />
         <meshStandardMaterial
@@ -272,15 +256,12 @@ export default function ComplexModel({
         />
       </mesh>
 
-      {/* 2. EXTRUSÃO 3D POLIGONAL DE TODOS OS BLOCOS SOBRE SEUS CONTORNOS EXATOS NA PLANTA */}
+      {/* 2. EXTRUSÃO 3D POLIGONAL DE TODOS OS BLOCOS (LIMPOS E SEM ESTOQUE) */}
       {COMPLEX_BLOCKS.map((block) => {
         if (filterStatus && block.status !== filterStatus) return null;
 
         const isSelected = selectedBlockId === block.id;
         const isHovered = hoveredBlockId === block.id;
-        const isRackVisible =
-          (isOpenRoof && (isSelected || block.id === 'bloco-e')) ||
-          (isOpenRoof && !selectedBlockId && block.status === 'locado');
 
         return (
           <ExtrudedBlockMesh
@@ -288,12 +269,10 @@ export default function ComplexModel({
             block={block}
             isSelected={isSelected}
             isHovered={isHovered}
-            isRackVisible={isRackVisible}
+            isOpenRoof={isOpenRoof}
             blueprintTexture={activeTexture}
             onSelectBlock={onSelectBlock}
             onHover={setHoveredBlockId}
-            onSelectPallet={onSelectPallet}
-            isHeatmap={isHeatmap}
           />
         );
       })}
