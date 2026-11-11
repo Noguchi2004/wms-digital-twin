@@ -11,7 +11,6 @@ interface SceneProps {
   resetTrigger: number;
   viewMode: 'Campus' | '2D' | 'Rodovia' | 'Patio';
   isOpenRoof: boolean;
-  filterStatus: string | null;
   isLightBlueprint?: boolean;
 }
 
@@ -85,7 +84,6 @@ export default function Scene({
   resetTrigger,
   viewMode,
   isOpenRoof,
-  filterStatus,
   isLightBlueprint = false,
 }: SceneProps) {
   const bgColor = isLightBlueprint ? '#e2e8f0' : '#060a14';
@@ -120,7 +118,6 @@ export default function Scene({
           selectedBlockId={selectedBlock?.id || null}
           onSelectBlock={onSelectBlock}
           isOpenRoof={isOpenRoof}
-          filterStatus={filterStatus}
           isLightBlueprint={isLightBlueprint}
         />
       </Suspense>

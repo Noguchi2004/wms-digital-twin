@@ -17,11 +17,9 @@ export default function Home() {
   const [viewMode, setViewMode] = useState<'Campus' | '2D' | 'Rodovia' | 'Patio'>('Campus');
   const [isOpenRoof, setIsOpenRoof] = useState(false);
   const [isLightBlueprint, setIsLightBlueprint] = useState(false);
-  const [filterStatus, setFilterStatus] = useState<BlockStatus | null>(null);
 
   // Responsividade Mobile
   const [isMobile, setIsMobile] = useState(false);
-  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -55,7 +53,6 @@ export default function Home() {
           resetTrigger={resetTrigger}
           viewMode={viewMode}
           isOpenRoof={isOpenRoof}
-          filterStatus={filterStatus}
           isLightBlueprint={isLightBlueprint}
         />
       </div>
@@ -159,25 +156,6 @@ export default function Home() {
             >
               {isLightBlueprint ? '☀️' : '🌙'}
             </button>
-
-            {/* No Mobile: Botão para abrir filtros */}
-            {isMobile && (
-              <button
-                onClick={() => setIsMobileFilterOpen(!isMobileFilterOpen)}
-                style={{
-                  padding: '6px 9px',
-                  background: isMobileFilterOpen ? '#3b82f6' : 'rgba(30, 41, 59, 0.8)',
-                  color: isMobileFilterOpen ? '#ffffff' : '#cbd5e1',
-                  borderRadius: '8px',
-                  border: '1px solid rgba(59, 130, 246, 0.4)',
-                  cursor: 'pointer',
-                  fontSize: '11px',
-                  fontWeight: 700,
-                }}
-              >
-                🏷️
-              </button>
-            )}
           </div>
         </div>
 
@@ -288,144 +266,6 @@ export default function Home() {
           </button>
         </div>
       </div>
-
-      {/* 3. FILTROS DA PLANTA OFICIAL (DESKTOP: CANTO INFERIOR ESQUERDO / MOBILE: POPUP) */}
-      {(!isMobile || isMobileFilterOpen) && (
-        <div
-          style={{
-            position: 'absolute',
-            bottom: isMobile ? '16px' : '20px',
-            left: isMobile ? '10px' : '20px',
-            right: isMobile ? '10px' : 'auto',
-            zIndex: 45,
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '8px',
-            background: 'rgba(15, 23, 42, 0.94)',
-            padding: isMobile ? '10px 14px' : '12px 16px',
-            borderRadius: '12px',
-            border: '1px solid rgba(51, 65, 85, 0.7)',
-            backdropFilter: 'blur(12px)',
-            boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.6)',
-            maxWidth: isMobile ? 'none' : '320px',
-          }}
-        >
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <span style={{ fontSize: '11px', color: '#94a3b8', fontWeight: 700, textTransform: 'uppercase' }}>
-              Filtrar Galpões por Status
-            </span>
-            {isMobile && (
-              <button
-                onClick={() => setIsMobileFilterOpen(false)}
-                style={{ background: 'transparent', border: 'none', color: '#94a3b8', fontSize: '14px', cursor: 'pointer' }}
-              >
-                ✕
-              </button>
-            )}
-          </div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-            {/* Todos */}
-            <button
-              onClick={() => {
-                setFilterStatus(null);
-                if (isMobile) setIsMobileFilterOpen(false);
-              }}
-              style={{
-                padding: '4px 10px',
-                fontSize: '11px',
-                fontWeight: 700,
-                borderRadius: '6px',
-                border: 'none',
-                cursor: 'pointer',
-                background: filterStatus === null ? '#3b82f6' : '#1e293b',
-                color: filterStatus === null ? '#ffffff' : '#94a3b8',
-              }}
-            >
-              Todos ({COMPLEX_BLOCKS.length})
-            </button>
-
-            {/* Locado */}
-            <button
-              onClick={() => {
-                setFilterStatus(filterStatus === 'locado' ? null : 'locado');
-                if (isMobile) setIsMobileFilterOpen(false);
-              }}
-              style={{
-                padding: '4px 10px',
-                fontSize: '11px',
-                fontWeight: 700,
-                borderRadius: '6px',
-                border: `1px solid ${STATUS_COLORS.locado.border}`,
-                cursor: 'pointer',
-                background: filterStatus === 'locado' ? STATUS_COLORS.locado.hex : '#1e293b',
-                color: filterStatus === 'locado' ? '#ffffff' : STATUS_COLORS.locado.text,
-              }}
-            >
-              ● Locado
-            </button>
-
-            {/* Disponível */}
-            <button
-              onClick={() => {
-                setFilterStatus(filterStatus === 'disponivel' ? null : 'disponivel');
-                if (isMobile) setIsMobileFilterOpen(false);
-              }}
-              style={{
-                padding: '4px 10px',
-                fontSize: '11px',
-                fontWeight: 700,
-                borderRadius: '6px',
-                border: `1px solid ${STATUS_COLORS.disponivel.border}`,
-                cursor: 'pointer',
-                background: filterStatus === 'disponivel' ? STATUS_COLORS.disponivel.hex : '#1e293b',
-                color: filterStatus === 'disponivel' ? '#ffffff' : STATUS_COLORS.disponivel.text,
-              }}
-            >
-              ● Disponível
-            </button>
-
-            {/* Expansão */}
-            <button
-              onClick={() => {
-                setFilterStatus(filterStatus === 'expansao' ? null : 'expansao');
-                if (isMobile) setIsMobileFilterOpen(false);
-              }}
-              style={{
-                padding: '4px 10px',
-                fontSize: '11px',
-                fontWeight: 700,
-                borderRadius: '6px',
-                border: `1px solid ${STATUS_COLORS.expansao.border}`,
-                cursor: 'pointer',
-                background: filterStatus === 'expansao' ? STATUS_COLORS.expansao.hex : '#1e293b',
-                color: filterStatus === 'expansao' ? '#ffffff' : STATUS_COLORS.expansao.text,
-              }}
-            >
-              ● Expansão
-            </button>
-
-            {/* Mamprin */}
-            <button
-              onClick={() => {
-                setFilterStatus(filterStatus === 'mamprin' ? null : 'mamprin');
-                if (isMobile) setIsMobileFilterOpen(false);
-              }}
-              style={{
-                padding: '4px 10px',
-                fontSize: '11px',
-                fontWeight: 700,
-                borderRadius: '6px',
-                border: `1px solid ${STATUS_COLORS.mamprin.border}`,
-                cursor: 'pointer',
-                background: filterStatus === 'mamprin' ? STATUS_COLORS.mamprin.hex : '#1e293b',
-                color: filterStatus === 'mamprin' ? '#ffffff' : STATUS_COLORS.mamprin.text,
-              }}
-            >
-              ● BTS
-            </button>
-          </div>
-        </div>
-      )}
 
       {/* 4. PAINEL DE DETALHES DO GALPÃO (DESKTOP: LATERAL / MOBILE: BOTTOM SHEET) */}
       {selectedBlock && (

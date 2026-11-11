@@ -15,7 +15,6 @@ interface ComplexModelProps {
   selectedBlockId: string | null;
   onSelectBlock: (block: ComplexBlock) => void;
   isOpenRoof: boolean;
-  filterStatus: string | null;
   isLightBlueprint?: boolean;
 }
 
@@ -205,7 +204,6 @@ export default function ComplexModel({
   selectedBlockId,
   onSelectBlock,
   isOpenRoof,
-  filterStatus,
   isLightBlueprint = false,
 }: ComplexModelProps) {
   const [hoveredBlockId, setHoveredBlockId] = useState<string | null>(null);
@@ -258,8 +256,6 @@ export default function ComplexModel({
 
       {/* 2. EXTRUSÃO 3D POLIGONAL DE TODOS OS BLOCOS (LIMPOS E SEM ESTOQUE) */}
       {COMPLEX_BLOCKS.map((block) => {
-        if (filterStatus && block.status !== filterStatus) return null;
-
         const isSelected = selectedBlockId === block.id;
         const isHovered = hoveredBlockId === block.id;
 
