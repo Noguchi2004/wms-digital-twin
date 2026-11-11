@@ -50,6 +50,10 @@ function CameraRig({
   useEffect(() => {
     if (!controlsRef.current) return;
 
+    // Bloqueia o horizonte estritamente para não permitir girar como um globo e ver por baixo do chão
+    controlsRef.current.maxPolarAngle = Math.PI / 2 - 0.05;
+    controlsRef.current.minPolarAngle = 0;
+
     if (viewMode === '2D') {
       // PLANTA BAIXA OFICIAL (VISTA ORTOGONAL SUPERIOR DA PRANCHA A1)
       controlsRef.current.setLookAt(-4, 118, 0.01, -4, 0, 0, true);
@@ -73,6 +77,8 @@ function CameraRig({
       truckSpeed={1.4}
       minDistance={1.5}
       maxDistance={260}
+      minPolarAngle={0}
+      maxPolarAngle={Math.PI / 2 - 0.05}
       mouseButtons={{ left: 1, right: 2, wheel: 4, middle: 0 }}
     />
   );
